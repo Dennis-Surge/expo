@@ -25,7 +25,6 @@ object DevLauncherPackageDelegate {
   fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> =
     listOf(
       DevLauncherModule(reactContext),
-      DevLauncherInternalModule(reactContext),
       DevLauncherDevMenuExtension(reactContext),
       DevLauncherAuth(reactContext)
     )
