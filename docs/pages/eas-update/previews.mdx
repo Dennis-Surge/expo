@@ -1,7 +1,7 @@
 ---
-title: Preview an update in a development build
-sidebar_title: Use development builds
-description: Learn how to use the expo-dev-client library to preview a published EAS Update inside a development build.
+title: Preview updates
+sidebar_title: Preview updates
+description: Learn how to preview updates in both preview and development builds.
 ---
 
 import { GithubIcon } from '@expo/styleguide-icons/custom/GithubIcon';
@@ -11,16 +11,27 @@ import { ContentSpotlight } from '~/ui/components/ContentSpotlight';
 import { Step } from '~/ui/components/Step';
 import { CODE } from '~/ui/components/Text';
 
-[`expo-dev-client`](/develop/development-builds/introduction/) library allows launching different versions of a project by creating a development build. Any compatible EAS Update can be previewed in a development build.
+// TODO: actually move this to "develop-faster" which we should rename to "preview" and move this current page back to dev-builds or whatever, then create new page about preview builds
+
+Before deploying an update to production, it's often prudent to test it in a production-like environment. As a developer, an easy way to accomplish this is to load your update in a development build, and this works great for loading previews from pull requests or directly from the EAS dashboard. Non-technical users will typically not want to interact with a development build, and they will want to test changes from a preview build on an [App store testing track](/review/overview/#app-store-testing-tracks) or [internal distribution](/review/overview/#internal-distribution-with-eas-build). This guide will show you how to preview updates in both preview and development builds.
+
+## Preview builds
+
+> **Note:** this feature is currently experimental and requires using a `next` version of `expo-updates`.
+
+
+## Development builds
+
+[`expo-dev-client`](/develop/development-builds/introduction/) library allows launching different versions of a project by creating a development build. Any update can be previewed in a development build with a compatible runtime version.
 
 This guide walks through the steps required to load and preview a published update inside a development build using the **Extensions** tab or constructing a specific Update URL.
 
-## Prerequisites
+### Prerequisites
 
 - [Create a development build and install it](/develop/development-builds/create-a-build/) on your device or Android Emulator or iOS Simulator.
 - Make sure your development build has the [`expo-updates` library installed](/eas-update/getting-started/#configure-your-project).
 
-## What is an Extensions tab
+### What is an Extensions tab
 
 <ContentSpotlight
   alt="Extensions tab in a development build."
